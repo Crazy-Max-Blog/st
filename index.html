@@ -10,8 +10,10 @@
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    
   </head>
-  <body>
+  <body>  
     <!-- Header Start -->
     <header class="site-header">
       <div class="wrapper site-header__wrapper">
@@ -24,13 +26,18 @@
             <!--<div style="display:flex;"><img style="height:100%;" src="menu.png"/></div>-->
           </button>
           <ul class="nav__wrapper">
-            <li class="nav__item"><a href="#">Home</a></li>
-            <li class="nav__item"><a href="#">About</a></li>
+            <li class="nav__item"><a href="#">О нас</a></li>
+            <li class="nav__item"><a href="#">Сочинения</a></li>
             <li class="nav__item"><a href="#">Services</a></li>
             <li class="nav__item"><a href="#">Hire us</a></li>
             <li class="nav__item"><a href="#">Contact</a></li>
             
-            <li class="nav__item"><a href="#"><img height="50lx" src="label.png"></img></a></li>
+            <li class="nav__item">
+              <a href="#">
+                <img id="img" height="50lx" src="cm.png"></img>
+                <div id="name">CrazyMax</div>
+              </a>
+            </li>
             
           </ul>
           
@@ -43,6 +50,16 @@
     <script src="header-1.js"></script>
     
     <script>
+      $.getJSON('https://crazymax.is-a.dev/st/1.json', function(data) {
+  
+          /*var text = `Img: ${data.img}<br>
+                      Name: ${data.name}`
+  
+  
+          //$(".name") = data.name;*/
+          document.getElementById("name").innerHTML = data.name;
+          document.getElementById("img").src = data.img;
+      });
       //document.getElementById("ul").innerHTML+=("<li class=\"nav__item\"><a href=\"#\">Test1</a></li>");
     </script>
     
