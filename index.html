@@ -15,7 +15,7 @@
   </head>
   <body>  
     <!-- Header Start -->
-    <header class="site-header">
+    <header class="site-header" style="position: fixed;width:100%;">
       <div class="wrapper site-header__wrapper">
         <!--<a href="#" class="brand">Brand</a>-->
         <a href="#" class="brand"><img width="75%" src="label.png"/></a>
@@ -28,13 +28,10 @@
           <ul class="nav__wrapper">
             <li class="nav__item"><a href="#">О нас</a></li>
             <li class="nav__item"><a href="#">Сочинения</a></li>
-            <li class="nav__item"><a href="#">Services</a></li>
-            <li class="nav__item"><a href="#">Hire us</a></li>
-            <li class="nav__item"><a href="#">Contact</a></li>
             
             <li class="nav__item">
               <a id="url" href="#" target="_blank">
-                <img id="img" height="50lx" src="cm.png"></img>
+                <img id="img" height="50vh" src="cm.png"></img>
                 <div id="name">CrazyMax</div>
               </a>
             </li>
@@ -48,6 +45,23 @@
     <!-- Header End -->
     
     <script src="header-1.js"></script>
+    
+    <style>
+      .n {
+          width: 100px;
+          height: 100px;
+          background-color: red;
+          
+          
+          position: fixed;
+          top:0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          
+          margin: auto;
+      }
+    </style>
     
     <script>
       $.getJSON('https://crazymax.is-a.dev/st/1.json', function(data) {
@@ -63,6 +77,9 @@
       });
       //document.getElementById("ul").innerHTML+=("<li class=\"nav__item\"><a href=\"#\">Test1</a></li>");
     </script>
+    <div class="n" style="vertical-align: middle;   width:20vh;height:20vh;background:RGB(100,100,100);">123</div>
+    
+    <div style="height:200vh;"></div>
     
   </body>
 </html>
