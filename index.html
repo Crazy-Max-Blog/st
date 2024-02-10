@@ -9,15 +9,17 @@
     <link rel="stylesheet" href="header-1.css" />
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
   </head>
   <body>
     <!-- Header Start -->
     <header class="site-header">
       <div class="wrapper site-header__wrapper">
         <!--<a href="#" class="brand">Brand</a>-->
-        <a href="#" class="brand"><img width="50%" src="label.png"/></a>
+        <a href="#" class="brand"><img width="75%" src="label.png"/></a>
         <nav class="nav">
           <button class="nav__toggle" aria-expanded="false" type="button">
+            <!--<img class="button--icon" src="menu.png"/>-->
             <i class="fa fa-bars"></i>
             <!--<div style="display:flex;"><img style="height:100%;" src="menu.png"/></div>-->
           </button>
@@ -27,16 +29,22 @@
             <li class="nav__item"><a href="#">Services</a></li>
             <li class="nav__item"><a href="#">Hire us</a></li>
             <li class="nav__item"><a href="#">Contact</a></li>
+            
+            <li class="nav__item"><a href="#"><img height="50lx" src="label.png"></img></a></li>
+            
           </ul>
           
-          <div width="10%" style="display:flex;">
-            <!--<img width="100%" src="nlabel.png"></img>-->
-          </div>
+            
         </nav>
       </div>
     </header>
     <!-- Header End -->
     
     <script src="header-1.js"></script>
+    
+    <script>
+      //document.getElementById("ul").innerHTML+=("<li class=\"nav__item\"><a href=\"#\">Test1</a></li>");
+    </script>
+    
   </body>
 </html>
